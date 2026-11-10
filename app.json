@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "VTmusics",
+    "slug": "vtmusics",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#090b10"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.vtmusics.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "VTmusics"
+    }
+  }
+}
