@@ -1,36 +1,60 @@
 # VTmusics
 
-A music discovery and playback app for the web and Android, built with Expo and React Native. One codebase supports both platforms.
+VTmusics is a music discovery and playback app for web and Android, built with Expo and React Native. One codebase supports both platforms.
 
-## Features
+## Included in this starter
 
 - Responsive home screen with curated playlists and song discovery
-- Search songs by title, artist, or album
+- Search by song title, artist, or album
 - Like songs and browse your liked songs in the Library
 - Audio playback controls for the included demo tracks
 - Dark theme with a compact mobile layout
+- Expo EAS profiles for Android preview APK and production app bundle builds
 
-## Run the app
+## Run locally
 
-Install Node.js, then from the project directory:
+Install Node.js, clone the repository, and install dependencies:
 
 ```bash
 npm install
+```
+
+Start the web app:
+
+```bash
 npm run web
 ```
 
-To run on Android, install Expo Go on a device and run:
+Start the Android development app (requires an Android device/emulator):
 
 ```bash
 npm run android
 ```
 
-Or start Expo and scan the QR code shown in the terminal:
+You can also run `npm start` and scan the Expo QR code with Expo Go.
+
+## Build
+
+Export a static web build to `dist/`:
 
 ```bash
-npm start
+npm run build:web
 ```
 
-## Notes
+Create an installable Android preview APK:
 
-The included audio and artwork are remote demo assets, so an internet connection is required. Replace these with properly licensed music and artwork before publishing. This starter does not yet include user accounts, cloud syncing, or a backend.
+```bash
+npx eas-cli build --platform android --profile preview
+```
+
+Create a production Android app bundle:
+
+```bash
+npx eas-cli build --platform android --profile production
+```
+
+EAS builds require an Expo account and project configuration. For publishing, follow Expo's EAS setup and store submission instructions.
+
+## Demo content and limitations
+
+The included audio and artwork are remote demo assets, so an internet connection is required. Replace them with properly licensed music and artwork before publishing. This starter does not yet include user accounts, cloud syncing, backend services, or a licensed music catalog. It is not affiliated with YouTube Music.
