@@ -1,37 +1,53 @@
 # VTmusics
 
-VTmusics is a music discovery and playback app for web and Android, built with Expo and React Native. One codebase supports both platforms.
+VTmusics is a music discovery and playback app for the web and Android, built with Expo and React Native. One codebase supports both platforms.
 
-## Included in this starter
+## Requirements
 
-- Responsive home screen with curated playlists and song discovery
-- Search by song title, artist, or album
-- Like songs and browse your liked songs in the Library
-- Audio playback controls for the included demo tracks
-- Dark theme with a compact mobile layout
-- Expo EAS profiles for Android preview APK and production app bundle builds
+- Node.js 20 LTS (recommended for this Expo SDK)
+- npm
+- For Android: Expo Go on a physical Android phone, or an Android emulator
 
 ## Run locally
 
-Install Node.js, clone the repository, and install dependencies:
+Clone the repository and enter its folder:
 
 ```bash
+git clone https://github.com/ratheeshsubramani364-cpu/VTmusics.git
+cd VTmusics
 npm install
 ```
 
 Start the web app:
 
 ```bash
-npm run web
+npx expo start --web
 ```
 
-Start the Android development app (requires an Android device/emulator):
+Or start Expo and choose a platform from the terminal:
+
+```bash
+npx expo start
+```
+
+For Android, scan the QR code using Expo Go on your phone. The computer and phone should be on the same Wi-Fi network. If LAN connection is blocked, try:
+
+```bash
+npx expo start --tunnel
+```
+
+To open directly in an Android emulator, start the emulator first, then run:
 
 ```bash
 npm run android
 ```
 
-You can also run `npm start` and scan the Expo QR code with Expo Go.
+If dependencies or Metro's cache are causing problems, from the project directory run:
+
+```bash
+npx expo install --fix
+npx expo start --clear
+```
 
 ## Build
 
